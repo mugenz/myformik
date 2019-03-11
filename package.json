@@ -1,11 +1,13 @@
 {
-  "name": "formik",
+  "name": "formikYup",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "formik": "^1.5.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "yup": "^0.26.10"
   },
   "scripts": {
     "start": "react-scripts start",
