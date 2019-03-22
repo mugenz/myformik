@@ -1,5 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Formik, Form, Field } from 'formik';
+
+const StyledInput = styled.div`
+  color: ${(props) => props.theme.color};
+  background-color: ${(props) => props.theme.color2};
+`;
 
 const RenderUse = () => (
   <div>
@@ -23,20 +29,20 @@ const RenderUse = () => (
       }
       
       render={props => (
-          <div>
-        <Form >
-          <Field
-            value={props.values.name}
-            name="name"
-          />
-          <Field component="select" name="color">
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-          </Field>
-          <button>Submit</button>
-        </Form>
-        </div>
+        <StyledInput>
+          <Form >
+            <Field
+              value={props.values.name}
+              name="name"
+            />
+            <Field component="select" name="color">
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+            </Field>
+            <button>Submit</button>
+          </Form>
+        </StyledInput>
       )}
     />
   </div>

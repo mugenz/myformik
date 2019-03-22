@@ -22,7 +22,7 @@ const ContactForm = ({touched, values, handleSubmit, handleChange, name}) => {
     <Field
       type="text"
       name='name3'
-      value={touched2.name3}
+      //value={touched2.name3}
     />
     <fieldset>
     <Field
