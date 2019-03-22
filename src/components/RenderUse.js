@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 import { Formik, Form, Field } from 'formik';
 
 const RenderUse = () => (

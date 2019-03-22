@@ -1,12 +1,10 @@
 import React from 'react';
-import RenderUse from './components/RenderUse';
-import CompUse from './components/CompUse';
+import Main from './components/Main';
 
 const App = () => (
-  <React.Fragment>
-    <RenderUse />
-    <CompUse />
-  </React.Fragment>
+  <>
+    <Main />
+  </>
 );
 
 
