@@ -6,7 +6,6 @@ const CompUse = () => (
     <div>
         <Formik 
             component={ContactForm}
-            
         />
     </div>
 );
@@ -14,9 +13,6 @@ const CompUse = () => (
 const ContactForm = ({touched, values, handleSubmit, handleChange, name}) => { 
     const touched2 = touched
     const handleChange2 = (e) => {console.log(e.target)}
-
-
-     
     return (
   <Form onSubmit={handleSubmit}>
     <Field
