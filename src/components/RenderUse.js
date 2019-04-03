@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Formik, Form, Field } from "formik";
 import UserContext from "./context/UserContext";
+import StateContext from "./context/StateContext";
 
 const StyledInput = styled.div`
   color: ${props => props.theme.color};
@@ -10,12 +11,14 @@ const StyledInput = styled.div`
 
 const RenderUse = () => {
   const data = useContext(UserContext);
+  const { name, showName } = useContext(StateContext);
   return (
     <div>
       <h1>My Form</h1>
       <Formik
         initialValues={{ name: data.kostas }}
         onSubmit={(values, actions) => {
+          showName("manos");
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
             actions.setSubmitting(false);
@@ -41,6 +44,7 @@ const RenderUse = () => {
           </StyledInput>
         )}
       />
+      <h2>{name}</h2>
     </div>
   );
 };

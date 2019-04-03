@@ -1,17 +1,19 @@
-import React from 'react';
-import Main from './components/Main';
-import StyleProvider from './components/theme/StyleProvider';
-import { UserProvider } from './components/context/UserContext';
+import React from "react";
+import Main from "./components/Main";
+import StyleProvider from "./components/theme/StyleProvider";
+import { UserProvider } from "./components/context/UserContext";
+import { StateProvider } from "./components/context/StateContext";
 
 const App = () => (
   <>
-    <UserProvider>
-      <StyleProvider>
-      <Main />
-      </StyleProvider>
-    </UserProvider> 
+    <StateProvider>
+      <UserProvider>
+        <StyleProvider>
+          <Main />
+        </StyleProvider>
+      </UserProvider>
+    </StateProvider>
   </>
 );
-
 
 export default App;
