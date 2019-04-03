@@ -4,8 +4,8 @@ import { Formik, Form, Field } from 'formik';
 import UserContext from './context/UserContext';
 
 const StyledInput = styled.div`
-  color: ${(props) => props.theme.color};
-  background-color: ${(props) => props.theme.color2};
+  color: ${props => props.theme.color};
+  background-color: ${props => props.theme.color2};
 `;
 
 
@@ -21,17 +21,13 @@ const RenderUse = () => {
           alert(JSON.stringify(values, null, 2));
           actions.setSubmitting(false);
         }, 1000);
-      }
-      }
+      }}
       handleChange={() => {
-        console.log('CHANGE')
-      }
-      }
+        console.log("CHANGE");
+      }}
       handleBlur={(values, actions) => {
-        console.log('BLur')
-      }
-      }
-      
+        console.log("BLur");
+      }}
       render={props => (
         <StyledInput>
           <Form >
@@ -53,6 +49,5 @@ const RenderUse = () => {
 )
 
 };
-
 
 export default RenderUse;
